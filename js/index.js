@@ -9,7 +9,7 @@ const siteContent = {
     "img-src": "img/logo.png"
   },
   "cta": {
-    "h1": "DOM Is Awesome",
+    "h1": "DOM \n Is \n Awesome",
     "button": "Get Started",
     "img-src": "img/header-img.png"
   },
@@ -41,19 +41,16 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let navItems = ['Services', 'Product', 'Vision', 'Features', 'About', 'Contact'];
 let nav = document.querySelector('nav');
 let navNodes = nav.querySelectorAll('a');
 
 for ( let i = 0; i < Array.from(navNodes).length; i++ ) {
-  navNodes[i].textContent = navItems[i];
+  navNodes[i].textContent = siteContent.nav['nav-item-' + [i]];
 }
 
 let cta = document.querySelector('.cta')
 let hOne = cta.querySelector('h1');
-hOne.innerText = `DOM
-Is
-Awesome`;
+hOne.innerText = siteContent.cta.h1;
 
 let ctaImg = cta.querySelector('.cta-img');
-ctaImg.src='./img/header-img.png';
+ctaImg.src = siteContent.cta["img-src"];
