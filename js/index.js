@@ -52,5 +52,26 @@ let cta = document.querySelector('.cta')
 let hOne = cta.querySelector('h1');
 hOne.innerText = siteContent.cta.h1;
 
-let ctaImg = cta.querySelector('.cta-img');
+let ctaImg = cta.querySelector('img');
 ctaImg.src = siteContent.cta["img-src"];
+
+const topContent = document.querySelector('.top-content');
+const features = topContent.querySelector('.text-content:nth-child(1)')
+features.querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+features.querySelector('p').textContent = siteContent["main-content"]["features-content"];
+
+
+document.querySelector('.middle-img').src = siteContent["main-content"]["middle-img-src"];
+
+document.querySelector('.bottom-content .text-content:nth-child(1) h4').textContent = siteContent["main-content"]["services-h4"];
+document.querySelector('.bottom-content .text-content:nth-child(1) p').textContent = siteContent["main-content"]["services-content"];
+document.querySelector('.bottom-content .text-content:nth-child(2) h4').textContent = siteContent["main-content"]["product-h4"];
+document.querySelector('.bottom-content .text-content:nth-child(2) p').textContent = siteContent["main-content"]["product-content"];
+document.querySelector('.bottom-content .text-content:nth-child(3) h4').textContent = siteContent["main-content"]["vision-h4"];
+document.querySelector('.bottom-content .text-content:nth-child(3) p').textContent = siteContent["main-content"]["vision-content"];
+
+const contact = document.querySelector('.contact');
+
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"];
+contact.querySelector('p:nth-child(1)').textContent = siteContent.contact.address;
+
