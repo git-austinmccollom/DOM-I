@@ -79,7 +79,7 @@ document.querySelector('.bottom-content .text-content:nth-child(3) p').textConte
 const contact = document.querySelector('.contact');
 
 contact.querySelector('h4').textContent = siteContent.contact["contact-h4"];
-contact.querySelector('p:nth-child(2)').textContent = siteContent.contact.address;
+contact.querySelector('p:nth-child(2)').innerText = siteContent.contact.address;
 contact.querySelector('p:nth-child(3)').textContent = siteContent.contact.phone;
 contact.querySelector('p:nth-child(4)').textContent = siteContent.contact.email;
 
