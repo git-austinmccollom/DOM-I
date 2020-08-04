@@ -46,7 +46,17 @@ let navNodes = nav.querySelectorAll('a');
 
 for ( let i = 0; i < Array.from(navNodes).length; i++ ) {
   navNodes[i].textContent = siteContent.nav['nav-item-' + [i+1]];
+  navNodes[i].style.color = "green";
 }
+let appendLink1 = document.createElement('a');
+appendLink1.textContent = 'idea 1';
+appendLink1.style.color = 'green';
+nav.appendChild(appendLink1);
+
+let appendLink2 = document.createElement('a');
+appendLink2.textContent = 'idea 2';
+appendLink2.style.color = 'green';
+nav.appendChild(appendLink2);
 
 let cta = document.querySelector('.cta')
 let hOne = cta.querySelector('h1');
@@ -84,3 +94,4 @@ contact.querySelector('p:nth-child(3)').textContent = siteContent.contact.phone;
 contact.querySelector('p:nth-child(4)').textContent = siteContent.contact.email;
 
 document.querySelector('footer p').textContent = siteContent.footer.copyright;
+
